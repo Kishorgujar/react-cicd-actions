@@ -1,5 +1,5 @@
 name: Greeting
-on: push #event
+on: [push,workflow_dispatch] #event
 jobs: 
     greet:
         runs-on: ubuntu-latest
