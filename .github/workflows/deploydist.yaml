@@ -1,5 +1,13 @@
 name: Deploy dist
-on: [push,workflow_dispatch] #event
+# on: [push,workflow_dispatch] #event
+on:
+    push:
+        branches:
+            - main
+            - 'feature/**'
+        paths-ignore:
+            - '.github/workflows/*'
+    workflow_dispatch:
 jobs: 
     Test:
         runs-on: ubuntu-latest
